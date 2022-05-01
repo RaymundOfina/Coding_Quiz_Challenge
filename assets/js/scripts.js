@@ -161,15 +161,15 @@ function clockTick() {
   }
 }
 
-function saveHighscore() {
+function saveLeaderboard() {
   // get value of input box
   var initials = initialsEl.value.trim();
 
   // make sure value wasn't empty
   if (initials !== "") {
     // get saved scores from localstorage, or if not any, set to empty array
-    var highscores =
-      JSON.parse(window.localStorage.getItem("highscores")) || [];
+    var leaderboard =
+      JSON.parse(window.localStorage.getItem("Leaderboard")) || [];
 
     // format new score object for current user
     var newScore = {
@@ -178,23 +178,23 @@ function saveHighscore() {
     };
 
     // save to localstorage
-    highscores.push(newScore);
-    window.localStorage.setItem("highscores", JSON.stringify(highscores));
+    leaderboard.push(newScore);
+    window.localStorage.setItem("Leaderboard", JSON.stringify(leaderboard));
 
     // redirect to next page
-    window.location.href = "highscores.html";
+    window.location.href = "leaderboard.html";
   }
 }
 
 function checkForEnter(event) {
   // "13" represents the enter key
   if (event.key === "Enter") {
-    saveHighscore();
+    saveLeaderboard();
   }
 }
 
 // user clicks button to submit initials
-submitBtn.onclick = saveHighscore;
+submitBtn.onclick = saveLeaderboard;
 
 // user clicks button to start quiz
 startBtn.onclick = startQuiz;
