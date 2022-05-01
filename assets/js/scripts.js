@@ -1,6 +1,6 @@
 // variables to keep track of quiz state
 var currentQuestionIndex = 0;
-var time = questions.length * 15;
+var time = questions.length * 10;
 var timerId;
 
 // variables to reference DOM elements
@@ -12,12 +12,9 @@ var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 
-// sound effects
-var sfxRight = new Audio("assets/sfx/correct.wav");
-var sfxWrong = new Audio("assets/sfx/incorrect.wav");
 
-function startQuiz() {
-  // hide start screen
+  // Start screen
+{
   var startScreenEl = document.getElementById("start-screen");
   startScreenEl.setAttribute("class", "hide");
 
@@ -60,6 +57,42 @@ function getQuestion() {
     choicesEl.appendChild(choiceNode);
   });
 }
+// list of all questions, choices, and answers
+var questions = [
+    {
+        title: "The condition in an if / else statement is enclosed within ____.",
+        choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+        answer: "parentheses"
+    },
+    {
+        title:
+        "What does js stand for after a file name (example.js).",
+        choices: ["JavaSwift", "JavaScript", "JavaScripts", "JavaServers"],
+        answer: "JavaScript"
+    },
+    {
+        title: "Arrays in JavaScript can be used to store ____.",
+        choices: [
+            "numbers and strings",
+            "other arrays",
+            "booleans",
+            "all of the above"
+        ],
+        answer: "all of the above"
+    },
+    {
+      title: "Commonly used data types DO NOT include:",
+      choices: ["strings", "booleans", "alerts", "numbers"],
+      answer: "alerts"
+    },
+    {
+        title:
+        "In terminal, how do make a new file ?:",
+        choices: ["file > New File", "just add the file name in terminal ", "touch followed by name", "type in add new file"],
+        answer: "touch followed by name"
+    }
+];
+
 
 function questionClick() {
   // check if user guessed wrong
