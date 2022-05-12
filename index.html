@@ -1,45 +1,57 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Coding Quiz Challenge</title>
-
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-  </head>
-
-  <body>
-    <div class="scores"><a href="leaderboard.html">LeaderBoards</a></div>
-
-    <div class="timer">Time: <span id="time">0</span></div>
-
-    <div class="wrapper">
-      <div id="start-screen" class="start">
-        <h1>Coding Quiz Challenge</h1>
-        <p>
-            Do you best to read along and answer the following code-related questions to 
-            the best of your abilities! Remember! you're being timed so good luck !
-        </p>
-        <button id="start">Start!</button>
-      </div>
-
-      <div id="questions" class="hide">
-        <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
-      </div>
-
-      <div id="end-screen" class="hide">
-        <h2>All done!</h2>
-        <p>Your final score is <span id="final-score"></span>.</p>
-        <p>
-          Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
-        </p>
-      </div>
-
-      <div id="feedback" class="feedback hide"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz Challenge</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  
+    <div class="timer-container">
+        <h3 id="countdown"></h3>
     </div>
-    <script src="./assets/js/scripts.js"></script>
-  </body>
+   
+    <div class="welcome">
+        <h1 class="start">Coding Quiz Challenge</h1>
+        <div class="start-div">
+            <p>
+              Do you best to read along and answer the following code-related questions to the best of your abilities! Remember! you're being timed so good luck !
+            </p>
+            <div class="div-button">
+                <button class="button">Start Quiz!</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="questions">
+        <div id="question-text" class="start"></div>
+      
+        <div class="answers">
+          <div style="text-align: center;"></div>
+            <div id="buttons" class="button-list">
+                
+            </div>           
+        </div>
+    </div>
+    <div id="enter-initials">
+        <h1 class="start">All Done!</h1>
+        <div class="start-div">
+            <div id="score"></div>
+            <label for="users" id="name">Enter Initials:</label>
+            <input type="text" id="initials">
+            <button class="button" id="submitInitials">Submit</button>
+        </div>
+    </div>
+    <div class="highscore-page">
+        <h1 class="start">Highscores!</h1>
+        <div>
+            <ol id="highscores">
+                
+            </ol>
+        </div>
+    </div>
+    
+    <script src="./assets/js/script.js"></script>
+</body>
 </html>

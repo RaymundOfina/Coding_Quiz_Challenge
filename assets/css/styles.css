@@ -1,89 +1,76 @@
-body {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 120%;
-  }
-  
-  a {
-    color: #32e6f6;
-    text-decoration: none;
-    transition: color 0.1s;
-  }
-  
-  a:hover {
-    color: #32e6f6;
-  }
-  
-  button {
-    display: inline-block;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 100%;
-    background-color: #32e6f6;
-    border-radius: 5px;
-    padding: 2px 10px;
-    color: white;
-    border: 0;
-    transition: background-color 0.1s;
-  }
-  
-  button:hover {
-    background-color: #32e6f6;
-  }
-  
-  .choices button {
-    display: block;
-  }
-  
-  input[type="text"] {
-    font-size: 100%;
-  }
-  
-  ol {
-    padding-left: 0px;
-    max-height: 400px;
-    overflow: auto;
-  }
-  
-  li {
-    padding: 5px;
-    list-style: decimal inside none;
-  }
-  
-  li:nth-child(odd) {
-    background-color: #f3edfc;
-  }
-  
-  .wrapper {
-    margin: 100px auto 0 auto;
-    max-width: 600px;
-  }
-  
-  .hide {
-    display: none;
-  }
-  
-  .start {
+.timer-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.start {
+    font-size: 38px;
+    margin: auto;
+    width: 40%;
     text-align: center;
-  }
-  
-  .scores {
+    line-height: 1.5;
+}
+
+.start-div {
+    font-size: 22px;
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.div-button {
+   text-align: center;
+}
+
+.button {
+    border-radius: 5px;
+    border: none;
+    background: rgb(78, 225, 244);
+    padding: 10px 20px;
+    color: white;
+}
+.buttons {
+    list-style: grid;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 25px;
+    margin: 20px;
+    color: white;
+    width: 150px;
+    
+}
+
+.button:hover {
+    background: darkmagenta;
+}
+
+.buttons:hover {
+    background: darkmagenta;
+}
+
+.button-list {
+    width: 40%;
+    align-items: center;
+    margin-top: 10px;
     position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  
-  .feedback {
-    font-style: italic;
-    font-size: 120%;
-    margin-top: 20px;
-    padding-top: 10px;
-    color: gray;
-    border-top: 2px solid #ccc;
-  }
-  
-  .timer {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
+    left: 40%;
+    list-style: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: initial !important;
+}
+
+.enter-initials {
+    display: none;
+}
+
+.highscore-page {
+    display: none;
+}
